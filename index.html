@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Abhi ❤️</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+h1{
+font-size:45px;
+animation:fade 2s ease-in-out;
+}
+
+p{
+font-size:20px;
+max-width:600px;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:40px;
+margin:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+#yes{
+background:white;
+color:#ff4d6d;
+}
+
+#no{
+background:#ff4d6d;
+color:white;
+position:relative;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1;}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Our Love Story ❤️</h1>
+
+<p>
+From strangers to my favorite notification...  
+From simple talks to endless laughter...  
+
+Abhi, you are not just my boyfriend,  
+you are my safe place, my happiness, my everything 🥹  
+
+So today I want to ask you something...
+</p>
+
+<h1>Will You Be Mine Forever? 💍</h1>
+
+<button id="yes" onclick="love()">YES 😍</button>
+<button id="no" onmouseover="run()">NO 😜</button>
+
+<script>
+
+function love(){
+document.body.innerHTML="<h1>YAYYY ❤️<br>You just made me the happiest girl alive 🥹</h1>";
+}
+
+function run(){
+let btn=document.getElementById('no');
+btn.style.position='absolute';
+btn.style.top=Math.random()*80+'%';
+btn.style.left=Math.random()*80+'%';
+}
+
+</script>
+
+</body>
+</html>
