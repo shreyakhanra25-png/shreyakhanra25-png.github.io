@@ -3,6 +3,8 @@
 <head>
 <title>For Abhi ❤️</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 
 body{
@@ -12,29 +14,38 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-font-family: 'Segoe UI', sans-serif;
-background: linear-gradient(135deg,#ff758c,#ff7eb3);
+font-family:'Segoe UI', sans-serif;
+background: linear-gradient(270deg,#ff758c,#ff7eb3,#ffd3a5);
+background-size:600% 600%;
+animation:gradient 12s ease infinite;
 color:white;
 text-align:center;
 overflow:hidden;
+padding:20px;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 h1{
-font-size:45px;
-animation:fade 2s ease-in-out;
+font-size:42px;
 }
 
 p{
 font-size:20px;
-max-width:600px;
+max-width:700px;
+line-height:1.6;
 }
 
 button{
-padding:15px 30px;
+padding:16px 32px;
 font-size:18px;
 border:none;
 border-radius:40px;
-margin:10px;
+margin:12px;
 cursor:pointer;
 transition:.3s;
 }
@@ -42,6 +53,7 @@ transition:.3s;
 #yes{
 background:white;
 color:#ff4d6d;
+box-shadow:0 0 25px rgba(255,255,255,.7);
 }
 
 #no{
@@ -51,12 +63,18 @@ position:relative;
 }
 
 button:hover{
-transform:scale(1.1);
+transform:scale(1.15);
 }
 
-@keyframes fade{
-from{opacity:0; transform:translateY(40px);}
-to{opacity:1;}
+.heart{
+position:absolute;
+color:white;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+from{transform:translateY(100vh);}
+to{transform:translateY(-10vh);}
 }
 
 </style>
@@ -64,16 +82,20 @@ to{opacity:1;}
 
 <body>
 
-<h1>Our Love Story ❤️</h1>
+<h1>🎬 Our Love Story</h1>
 
 <p>
-From strangers to my favorite notification...  
-From simple talks to endless laughter...  
+Out of millions of people in this world...  
+somehow my heart found YOU ❤️  
 
-Abhi, you are not just my boyfriend,  
-you are my safe place, my happiness, my everything 🥹  
+You are my favorite notification,  
+my safest place,  
+my biggest smile,  
+and the best part of my every day 🥹  
 
-So today I want to ask you something...
+Life feels softer, happier, and more beautiful with you in it.
+
+So today I want to ask you something from the deepest part of my heart...
 </p>
 
 <h1>Will You Be Mine Forever? 💍</h1>
@@ -81,12 +103,24 @@ So today I want to ask you something...
 <button id="yes" onclick="love()">YES 😍</button>
 <button id="no" onmouseover="run()">NO 😜</button>
 
+
+<!-- Auto Play Romantic Song -->
+<iframe width="0" height="0"
+src="https://www.youtube.com/embed/248FvYc7WBM?autoplay=1&mute=0&loop=1&playlist=248FvYc7WBM"
+frameborder="0"
+allow="autoplay">
+</iframe>
+
+
 <script>
 
+// YES button surprise
 function love(){
-document.body.innerHTML="<h1>YAYYY ❤️<br>You just made me the happiest girl alive 🥹</h1>";
+document.body.innerHTML =
+"<h1>💖 YAYYYYY 💖</h1><h2>You just made me the happiest girl alive 🥹❤️</h2>";
 }
 
+// NO button runs away
 function run(){
 let btn=document.getElementById('no');
 btn.style.position='absolute';
@@ -94,7 +128,21 @@ btn.style.top=Math.random()*80+'%';
 btn.style.left=Math.random()*80+'%';
 }
 
+// floating hearts
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(Math.random()*25+10)+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>{heart.remove();},6000);
+
+},400);
+
 </script>
 
 </body>
 </html>
+g
